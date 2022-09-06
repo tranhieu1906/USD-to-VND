@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <table>
+
+        <tr>
+            <td>Amount</td>
+            <td>From</td>
+            <td>To Currency</td>
+        </tr>
+        <tr>
+            <td><input type="text" id="number"></td>
+            <td>
+                <select id="change1">
+                    <option value="VN">Viet Nam</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="change2">
+                    <option value="USD">USD</option>
+                    <option value="VN">Viet Nam</option>
+
+                </select>
+            </td>
+            <td>
+                <button onclick="submit()">submit</button>
+            </td>
+
+        </tr>
+
+    </table>
+
+<script>
+    function submit(){
+        var input = document.getElementById("number").value
+        var change1 = document.getElementById("change1").value
+        var change2 = document.getElementById("change2").value
+        if (change1 === change2){
+            alert("result :" + input)
+        }else if(change1 === "VN" && change2 === "USD"){
+            alert("result : " + input/23515)
+        }else if(change1 === "USD" && change1 === "VN") {
+            alert("result : " + input * 23515)
+        }
+    }
+
+</script>
+</body>
+</html>
